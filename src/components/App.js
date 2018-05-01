@@ -87,11 +87,11 @@ class App extends React.Component {
     let chart;
 
     if(this.state.totalVotes === 0){
-      chart = <div>You need to add some entries and some votes to see the chart</div>;
+      chart = <div>You need to vote to see the chart</div>;
     } else {
       chart = <PieChart
               data={this.state.pieData}
-              width={500}
+              width={400}
               height={400}
               radius={120}
               innerRadius={30}
@@ -113,12 +113,12 @@ class App extends React.Component {
         <div className="data">
           <div className="leftColumn">
             <div className="background">
-              {chart}
+              <center>{chart}</center>
             </div>
           </div>
           <div className="rightColumn">
             <div className="background">
-              <div className="voteHeader">Vote for your favorite or add a new one</div>
+              <div className="voteHeader">Vote for your favorite or add a new entry</div>
               {candidates}
               <button className="addButton" onClick={this.addEntry}>Add</button> 
               <input id="newEntry" placeholder="Insert entry name" onChange={this.handleInputChange}/>

@@ -78,7 +78,7 @@ display: flex;
 
 .leftColumn{
 text-align: center;
-min-width: 540px;
+min-width: 440px;
 width: 50%;
 vertical-align: top;
 display: inline-block;
