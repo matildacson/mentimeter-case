@@ -1,7 +1,8 @@
 body{
-background: #9494b8;
+background: #6baed6;
 font-family: Futura;
 font-weight: normal;
+margin: 0px;
 }
 
 h1{
@@ -21,7 +22,7 @@ font-family: Futura;
 }
 
 .voteButton{
-background: #9494b8;
+background: #3182bd;
 color: #FFFFFF;
 padding: 5px;
 margin: 5px;
@@ -33,7 +34,7 @@ width: 40px;
 }
 
 .addButton{
-background: #70db70;
+background: #74c476;
 color: #FFFFFF;
 padding: 5px;
 margin: 5px;
@@ -44,36 +45,66 @@ font-size: 14px;
 width: 40px;
 }
 
+.addButton:focus, .voteButton:focus, input:focus{
+outline: none;
+}
+
+.addButton:hover, .voteButton:hover{
+opacity: 0.9;
+}
+
 .header{
 text-align: center;
-padding: 20px;
+padding: 10px;
+color: #FFF;
+opacity: 0.9;
+margin: 0px;}
+
+.voteHeader{
+margin-bottom: 20px;
+text-transform: bold;
 }
 
 .content{
-background: #FFFFFF;
+width: 100%;
+}
+
+.data{
 width: 80%;
 min-width: 500px;
 margin: auto;
-min-height: 600px;
-
+display: flex;
 }
 
-.column{
+.leftColumn{
+text-align: center;
+min-width: 540px;
 width: 50%;
 vertical-align: top;
 display: inline-block;
 }
 
+.rightColumn{
+display: inline-block;
+width: 50%;
+min-width: 300px;
+vertical-align: top;
+}
+
+.background{
+margin: 10px;
+padding: 20px;
+background: #FFF;
+border-radius: 5px;
+border: 0px;
+}
+
 .left{
 text-align: center;
-
+width: fixed;
 }
 
 .right{
 text-align: left
 padding-bottom: 20px;
-}
-
-.rd3-chart-title{
-margin: 0;
 }

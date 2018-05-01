@@ -15,7 +15,10 @@ class App extends React.Component {
     this.addEntry = this.addEntry.bind(this);
 
     this.state = {
-      pieData: [],
+      pieData: [
+                {label: "Matilda", value: '0', votes: 0, id: 1}, 
+                {label: "Josefine", value: '0', votes: 0, id: 2}
+                ],
       totalVotes: 0,
       newEntryName: ''
     };
@@ -77,9 +80,9 @@ class App extends React.Component {
         document.getElementById('newEntry').value = '';
     }
   }
+  
 
   render () {
-    console.log("rerendering")
 
     let chart;
 
@@ -90,9 +93,9 @@ class App extends React.Component {
               data={this.state.pieData}
               width={500}
               height={400}
-              radius={100}
+              radius={120}
               innerRadius={30}
-              title="This is my Pie Chart"
+              title={"Number of votes: " + this.state.totalVotes}
             />
 
     }
@@ -107,13 +110,20 @@ class App extends React.Component {
     return (
       <div className="content">
         <Header />
-        <div className="column left">
-        {chart}
-        </div>
-        <div className="column right">
-          {candidates}
-          <button className="addButton" onClick={this.addEntry}>Add</button> 
-          <input id="newEntry" placeholder="Insert entry name" onChange={this.handleInputChange}/>
+        <div className="data">
+          <div className="leftColumn">
+            <div className="background">
+              {chart}
+            </div>
+          </div>
+          <div className="rightColumn">
+            <div className="background">
+              <div className="voteHeader">Vote for your favorite or add a new one</div>
+              {candidates}
+              <button className="addButton" onClick={this.addEntry}>Add</button> 
+              <input id="newEntry" placeholder="Insert entry name" onChange={this.handleInputChange}/>
+            </div>
+          </div>
         </div>
       </div>
     );
