@@ -1,0 +1,79 @@
+body{
+background: #9494b8;
+font-family: Futura;
+font-weight: normal;
+}
+
+h1{
+font-family: Futura;
+font-weight: normal;
+}
+
+input{
+background: #F2F2F2;
+border-radius: 5px;
+border: 0px;
+padding: 5px;
+margin: 5px;
+margin-left: 0px;
+font-size: 14px;
+font-family: Futura;
+}
+
+.voteButton{
+background: #9494b8;
+color: #FFFFFF;
+padding: 5px;
+margin: 5px;
+font-family: Futura;
+border: 0px;
+border-radius: 5px;
+font-size: 14px;
+width: 40px;
+}
+
+.addButton{
+background: #70db70;
+color: #FFFFFF;
+padding: 5px;
+margin: 5px;
+font-family: Futura;
+border: 0px;
+border-radius: 5px;
+font-size: 14px;
+width: 40px;
+}
+
+.header{
+text-align: center;
+padding: 20px;
+}
+
+.content{
+background: #FFFFFF;
+width: 80%;
+min-width: 500px;
+margin: auto;
+min-height: 600px;
+
+}
+
+.column{
+width: 50%;
+vertical-align: top;
+display: inline-block;
+}
+
+.left{
+text-align: center;
+
+}
+
+.right{
+text-align: left
+padding-bottom: 20px;
+}
+
+.rd3-chart-title{
+margin: 0;
+}
