@@ -14,18 +14,20 @@ input{
 background: #F2F2F2;
 border-radius: 5px;
 border: 0px;
-padding: 5px;
+padding: 5px 10px 5px 10px;
 margin: 5px;
 margin-left: 0px;
 font-size: 14px;
 font-family: Futura;
+width: auto;
 }
 
 .voteButton{
 background: #3182bd;
 color: #FFFFFF;
-padding: 5px;
+padding: 5px 10px 5px 10px;
 margin: 5px;
+margin-right: 20px;
 font-family: Futura;
 border: 0px;
 border-radius: 5px;
@@ -35,9 +37,10 @@ width: 40px;
 
 .addButton{
 background: #74c476;
-color: #FFFFFF;
+color: #FFF;
 padding: 5px;
 margin: 5px;
+margin-right: 10px;
 font-family: Futura;
 border: 0px;
 border-radius: 5px;
@@ -45,12 +48,40 @@ font-size: 14px;
 width: 40px;
 }
 
-.addButton:focus, .voteButton:focus, input:focus{
+.removeButton{
+background: #FFF;
+color: #000;
+padding: 0px;
+font-family: Futura;
+border: 0px;
+border-radius: 5px;
+font-size: 14px;
+width: 40px;
+margin-right: 0px;
+}
+
+.addButton:focus, .voteButton:focus, input:focus, .removeButton:focus{
 outline: none;
 }
 
-.addButton:hover, .voteButton:hover{
-opacity: 0.9;
+.addButton:hover, .voteButton:hover, .removeButton:hover{
+opacity: 0.8;
+}
+
+.entry{
+width: 100%;
+border-bottom: #f2f2f2 1px solid;
+}
+
+.labelCol{
+display: inline-block;
+width: 80%;
+}
+
+.trashCol{
+width: 20%;
+display: inline-block;
+text-align: right
 }
 
 .header{
@@ -62,7 +93,8 @@ margin: 0px;}
 
 .voteHeader{
 margin-bottom: 20px;
-text-transform: bold;
+text-align: center;
+font-size: 14px;
 }
 
 .content{
@@ -79,15 +111,15 @@ display: flex;
 .leftColumn{
 text-align: center;
 min-width: 540px;
-width: 50%;
+width: 60%;
 vertical-align: top;
 display: inline-block;
 }
 
 .rightColumn{
 display: inline-block;
-width: 50%;
-min-width: 300px;
+width: 40%;
+min-width: 310px;
 vertical-align: top;
 }
 
