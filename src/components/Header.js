@@ -5,7 +5,7 @@ class Header extends React.Component {
   render () {
 
     return (
-      <div className="header">
+      <div id="header">
         <h1>Hello PieChart!</h1>
       </div>
     );

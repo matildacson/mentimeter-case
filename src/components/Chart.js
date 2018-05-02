@@ -3,14 +3,13 @@ import React, {Component} from 'react';
 let PieChart = require('react-d3/piechart').PieChart
 
 class Chart extends React.Component {
-  
 
   render () {
 
     let chart;
 
     if(this.props.totalVotes === 0){
-      chart = <div>You need to vote to see the chart</div>;
+      chart = <h4>You need to vote to see the chart</h4>;
     } else {
       chart = <PieChart
               data={this.props.data}

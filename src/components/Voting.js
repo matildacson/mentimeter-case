@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Chart from './Chart.js'
 
-let PieChart = require('react-d3/piechart').PieChart
-
 class Voting extends React.Component {
   
   constructor(props) {
@@ -129,22 +127,7 @@ class Voting extends React.Component {
 
   render () {
 
-    let chart;
-
-    if(this.state.totalVotes === 0){
-      chart = <div>You need to vote to see the chart</div>;
-    } else {
-      chart = <PieChart
-              data={this.state.pieData}
-              width={500}
-              height={400}
-              radius={120}
-              innerRadius={30}
-              title={"Number of votes: " + this.state.totalVotes}
-            />
-
-    }
-    //Mapping all entries with corresponding vote and remove buttons
+    //Mapping all entries along with their corresponding vote - and remove buttons
     let candidates = this.state.pieData.map(a => 
       <div key={a.id} className="entry">
         <div className="labelCol">
@@ -170,7 +153,7 @@ class Voting extends React.Component {
         </div>
         <div className="rightColumn">
           <div className="background">
-            <div className="voteHeader">Vote or add a new entry</div>
+            <div className="voteHeader"><h4>Vote or add a new entry</h4></div>
               {candidates}
             <button className="addButton" onClick={this.addEntry}><span className="glyphicon glyphicon-plus"></span></button> 
             <input id="newEntry" placeholder="Create new entry" onChange={this.handleInputChange}/>
