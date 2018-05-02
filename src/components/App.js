@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from './Header.js';
-import Voting from './Votes.js';
+import Voting from './Voting.js';
 
 class App extends React.Component {
   

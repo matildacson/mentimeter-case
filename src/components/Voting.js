@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Chart from './Chart.js'
 
 let PieChart = require('react-d3/piechart').PieChart
 
@@ -164,7 +165,7 @@ class Voting extends React.Component {
       <div className="data">
         <div className="leftColumn">
           <div className="background">
-            {chart}
+            <Chart totalVotes={this.state.totalVotes} data={this.state.pieData}/>
           </div>
         </div>
         <div className="rightColumn">
